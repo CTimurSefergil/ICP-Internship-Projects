@@ -45,7 +45,6 @@ actor {
         case (#Ok(blockIndex)) { return #ok blockIndex };
       };
     } catch (error : Error) {
-      // catch any errors that might occur during the transfer
       return #err("Reject message: " # Error.message(error));
     };
   };
